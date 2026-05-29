@@ -7,7 +7,7 @@ class Loader(Dataset):
     def __init__(self, data_df: pd.DataFrame):
         user_col = 'user_idx'
         movie_col = 'movie_idx'
-        rating_col = 'ratings'
+        rating_col = 'rating'
         required_cols = {user_col,movie_col,rating_col}
         if not required_cols.issubset(data_df.columns):
             raise ValueError(f"Require correct column names")
